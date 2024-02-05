@@ -1,6 +1,14 @@
-# Optimizing Gradient through CVor: A Universal Control Variates Operator
+### Optimizing Gradient through CVor: A Universal Control Variates Operator
 
-## Dependencies
+### Description
+
+We have integrated the CVor operator into the original VAE codebase, allowing for quick and easy usage through simple operations. In the code, we provide implementation examples of  CVor, such as NN and RLOO.Depending on the specific F function, CVOR may have different effects, and we encourage readers to design their own F functions.
+
+------------
+
+### 
+
+### Dependencies
 ```
 tensorflow >= 2.5.0
 tensorflow-datasets >= 4.2.0
@@ -12,7 +20,7 @@ numpy >= 1.19.5
 tqdm >= 4.60.0
 ```
 
-## Usage
+### Usage
 Running VAE experiments:
 ```
 python experiment_launcher_singlelayer.py --dataset={dataset} --genmo_lr={lr} --infnet_lr={lr} --encoder_type=nonlinear --grad_type={grad_type} --K={K} --D=200 --seed={seed}
@@ -32,9 +40,8 @@ python experiment_launcher_singlelayer.py --dataset={dataset} --genmo_lr={lr} --
     - `K=2`: `discrete_stein_avg`
     - `K>2`: `discrete_stein_output_avg`
   - Cvor_AO (ours):`Cvor_AO`
-  - Cvor(ours)：`Cvor`
+  - Cvor(ours)：`Cvor_NN`
 
+### Acknowledgement
 
-## Citation
-
-To cite this work, please use
+The code is modified from  Discrete Stein(https://github.com/thjashin/rodeo)
